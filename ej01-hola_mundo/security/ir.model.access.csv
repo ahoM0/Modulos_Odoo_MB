@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ej01-hola_mundo_ej01-hola_mundo,ej01-hola_mundo.ej01-hola_mundo,model_ej01-hola_mundo_ej01-hola_mundo,base.group_user,1,1,1,1
