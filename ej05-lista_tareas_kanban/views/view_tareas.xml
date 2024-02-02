@@ -9,7 +9,7 @@
             <kanban default_group_by="stage_id">
                 <field name="stage_id" />
                 <field name="name" />
-                <!-- Plantilla QWeb para indicar como es la tarjeta Kanban-->
+                <!-- Plantilla QWeb para indicar como es la Tarjeta Kanban-->
                 <templates>
                     <t t-name="kanban-box">
                         <div class="oe_kanban_card oe_kanban_global_click">
