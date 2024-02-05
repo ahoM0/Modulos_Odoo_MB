@@ -10,7 +10,6 @@
             -->
             <calendar date_start="date_assign" date_stop="date_end" color="project_id">
                 <field name="name" />
-                <field name="user_id" />
             </calendar>
         </field>
     </record>
