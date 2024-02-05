@@ -21,6 +21,7 @@
         </field>
     </record>
 
+
     <record id='action_tareas_kanban' model='ir.actions.act_window'>
         <field name="name">Mis tareas (Kanban)</field>
         <field name="res_model">project.task</field>
@@ -31,7 +32,7 @@
         <field name="context">{'kanban_view_ref': 'my_project.tareas_kanban_view'}</field>
     </record>
 
-    <!-- Definimos los "Menu Item"-->
+    <!-- Definimos los "Menus Item"-->
     <menuitem id="menu_custom_top_level" name="Mis tareas (Kanban)" web_icon="Lista Tareas (Kanban),static/description/icon.png"/>
     <menuitem id="menu_tareas_kanban" parent="menu_custom_top_level" action="action_tareas_kanban" sequence="10" />
 </odoo>
