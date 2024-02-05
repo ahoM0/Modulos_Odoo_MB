@@ -1,8 +1,6 @@
 {
     'name': "Lista de tareas (Calendario)",  # Module title
     'description': """Lista de tareas en formato calendario""",  # You can also rst format
-    'author': "",
-    'website': "",
     'author':"Mohammed Benali",
     'category': 'Project',
     'version': '1.0',
