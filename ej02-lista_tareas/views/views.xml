@@ -43,6 +43,8 @@
           <field name="urgente" />
           <field name="realizada" />
           <field name="fecha"/>
+          <field name="fecha_fin"/>
+          <field name="marco_imagen"/>
         </tree>
       </field>
     </record>
@@ -59,6 +61,8 @@
                 <field name="urgente" />
                 <field name="realizada" />
                 <field name="fecha"/>
+                <field name="fecha_fin"/>
+                <field name="marco_imagen"/>
                  <!-- Plantilla QWeb para indicar como es la Tarjeta Kanban
                       Y solo se mostrará el nombre de la tarea en la tarjeta. -->
                 <templates>
@@ -66,6 +70,9 @@
                         <div class="oe_kanban_card oe_kanban_global_click">
                             <field name="tarea" />
                         </div>
+                       <div class="o_kanban_image">
+                            <img t-att-alt="record.name.value"   t-att-src="kanban_image('lista_tareas.lista','marco_imagen', record.id.raw_value)"/>
+                       </div>
                     </t>
                 </templates>
             </kanban>
@@ -77,7 +84,7 @@
         <field name="name">Calendar Date</field>
         <field name="model">lista_tareas.lista</field>
         <field name="arch" type="xml">
-            <calendar string="Calendario MB" date_start="fecha" date_stop="fecha_fin">
+            <calendar string="Calendario MB" date_start="fecha" date_delay="horas" >
                 <field name="tarea" />
             </calendar>
         </field>
