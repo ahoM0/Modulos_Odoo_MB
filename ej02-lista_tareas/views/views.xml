@@ -44,7 +44,7 @@
           <field name="realizada" />
           <field name="fecha"/>
           <field name="fecha_fin"/>
-          <field name="marco_imagen"/>
+          <field name="imagen_medium"/>
         </tree>
       </field>
     </record>
@@ -62,17 +62,18 @@
                 <field name="realizada" />
                 <field name="fecha"/>
                 <field name="fecha_fin"/>
-                <field name="marco_imagen"/>
+                <field name="id"/>
+                <field name="imagen_medium"/>
                  <!-- Plantilla QWeb para indicar como es la Tarjeta Kanban
                       Y solo se mostrará el nombre de la tarea en la tarjeta. -->
                 <templates>
                     <t t-name="kanban-box">
-                        <div class="oe_kanban_card oe_kanban_global_click">
-                            <field name="tarea" />
-                        </div>
-                       <div class="o_kanban_image">
-                            <img t-att-alt="record.name.value"   t-att-src="kanban_image('lista_tareas.lista','marco_imagen', record.id.raw_value)"/>
-                       </div>
+                            <div class="o_kanban_image" >
+                              <img alt="Imagen" t-att-src="kanban_image('lista_tareas.lista','imagen_medium', record.id.raw_value)"/>
+                            </div>
+                              <div class="oe_kanban_car oe_kanban_global_click">
+                                <field name="tarea" />
+                              </div>
                     </t>
                 </templates>
             </kanban>
