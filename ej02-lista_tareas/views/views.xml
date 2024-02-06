@@ -11,10 +11,9 @@
       <field name="res_model">lista_tareas.lista</field>
       <!-- indicamos que nuestro formulario tendrá vista tree (para mostrar todos los datos
       y vista form (para crear o editar datos)
-      La vista Form no la definimos, por lo cual tendremos la version automatica.
-      La vista tree la definiremos mas abajo.
-      -->
-      <field name="view_mode">tree,form</field>
+       -->
+      <field name="view_mode">kanban,tree,form,calendar</field>
+
     </record>
 
 
@@ -43,10 +42,46 @@
           <field name="prioridad" />
           <field name="urgente" />
           <field name="realizada" />
+          <field name="fecha"/>
         </tree>
       </field>
     </record>
 
+    <!-- Definimos la vista en formato kanban -->
+    <record model="ir.ui.view" id="tareas_kanban_view">
+    <field name="name">Lista de Tareas Kanban</field>
+    <field name="model">lista_tareas.lista</field>
+    <field name="arch" type="xml">
+       <!-- Agrupamos por si esta realizada o no -->
+            <kanban default_group_by="realizada">
+                <field name="tarea" />
+                <field name="prioridad" />
+                <field name="urgente" />
+                <field name="realizada" />
+                <field name="fecha"/>
+                 <!-- Plantilla QWeb para indicar como es la Tarjeta Kanban
+                      Y solo se mostrará el nombre de la tarea en la tarjeta. -->
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click">
+                            <field name="tarea" />
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+    </field>        
+    </record>
+
+    <!--Vista Calender para la fecha-->
+     <record id="tareas_calender_view" model="ir.ui.view">
+        <field name="name">Calendar Date</field>
+        <field name="model">lista_tareas.lista</field>
+        <field name="arch" type="xml">
+            <calendar string="Calendario MB" date_start="fecha" date_stop="fecha_fin">
+                <field name="tarea" />
+            </calendar>
+        </field>
+    </record>
 
   </data>
 </odoo>
