@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="t03-gestor_hospital.list">
+      <field name="name">t03-GestorHospital list</field>
+      <field name="model">t03-gestor_hospital.t03-gestor_hospital</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="t03-gestor_hospital.action_window">
+      <field name="name">t03-GestorHospital window</field>
+      <field name="res_model">t03-gestor_hospital.t03-gestor_hospital</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="t03-gestor_hospital.action_server">
+      <field name="name">t03-GestorHospital server</field>
+      <field name="model_id" ref="model_t03-gestor_hospital_t03-gestor_hospital"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="t03-GestorHospital" id="t03-gestor_hospital.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="t03-gestor_hospital.menu_1" parent="t03-gestor_hospital.menu_root"/>
+    <menuitem name="Menu 2" id="t03-gestor_hospital.menu_2" parent="t03-gestor_hospital.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="t03-gestor_hospital.menu_1_list" parent="t03-gestor_hospital.menu_1"
+              action="t03-gestor_hospital.action_window"/>
+    <menuitem name="Server to list" id="t03-gestor_hospital" parent="t03-gestor_hospital.menu_2"
+              action="t03-gestor_hospital.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,34 +1,26 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "t03-GestorHospital",
+    'name': "Gestor Hospital",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Gestionar un Hospital.",
 
     'description': """
-Long description of module's purpose
+    Módulo para gestionar los diagnosticos de los medicos y pacientes MB.
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
+    'author': "Mohammed Benali",
+    'application': True,
+    'category': 'Tools',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
     'depends': ['base'],
 
-    # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+
+        'views/vista_medico.xml',
+        'views/vista_paciente.xml',
+        'views/vista_diagnostico.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+
 }
 
