@@ -22,6 +22,7 @@ class lista_tareas(models.Model):
     horas = fields.Integer("Horas")
     fecha_fin = fields.Date("Fecha Fin")
     imagen_medium = fields.Image("Imagen")
+    
     #Indicamos que este valor es computado y se computara con la funcion "_value_urgente"
     #Con store=True indicamos que pese a ser computado, cada vez que se compute se guarde en la base de datos
     #esto se hace para que podamos utilizar el campo en busquedas, filtrados y ordenaciones

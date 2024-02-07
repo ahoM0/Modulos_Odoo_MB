@@ -64,16 +64,18 @@
                 <field name="fecha_fin"/>
                 <field name="id"/>
                 <field name="imagen_medium"/>
-                 <!-- Plantilla QWeb para indicar como es la Tarjeta Kanban
-                      Y solo se mostrará el nombre de la tarea en la tarjeta. -->
+                 <!-- Plantilla QWeb para indicar como es la Tarjeta Kanban   -->
                 <templates>
                     <t t-name="kanban-box">
+                          <div>
                             <div class="o_kanban_image" >
+                            <!-- Utilizamos la funcion kanaban_image la cual le pasamos el modelo, la imagen y el id para localizar la imagen-->
                               <img alt="Imagen" t-att-src="kanban_image('lista_tareas.lista','imagen_medium', record.id.raw_value)"/>
                             </div>
                               <div class="oe_kanban_car oe_kanban_global_click">
                                 <field name="tarea" />
                               </div>
+                          </div> 
                     </t>
                 </templates>
             </kanban>
