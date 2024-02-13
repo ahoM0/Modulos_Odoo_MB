@@ -19,7 +19,7 @@
         'security/ir.model.access.csv',
         'views/vista_paciente.xml',
         'views/vista_medico.xml',
-        'views/vista_diagnostico.xml'
+        'views/vista_diagnostico.xml' 
     ],
 
 }
