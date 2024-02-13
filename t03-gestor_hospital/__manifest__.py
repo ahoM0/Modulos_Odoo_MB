@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Gestor Hospital MB",
+    'name': "Gestor Hospital  MB",
 
     'summary': "Gestionar un Hospital.",
 
