@@ -4,15 +4,18 @@ from odoo import models, fields, api
 
 
 class Medico(models.Model):
-    _name = 'hospital.medico'
+    _name = 'hospital.medicos'
     _description = 'Medico del hospital'
-
-    name = fields.Char('Nombre del médico', required=True)
-    apellidos = fields.Char('Apellidos del médico') 
+    _rec_name="nombre"
+    
+    # 
     num_colegiado = fields.Integer('Número del colegiado', required=True)
+    nombre = fields.Char('Nombre del médico', required=True)
+    apellidos = fields.Char('Apellidos del médico') 
 
-    #  Variable atendio a pacientes 
-    # un medico puede atender varios pacientes
+    # 
+    atenciones_id = fields.One2many('hospital.diagnosticos', 'atencion_medicos')
+
 
     
 

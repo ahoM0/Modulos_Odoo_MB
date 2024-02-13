@@ -63,7 +63,8 @@
                 <field name="fecha"/>
                 <field name="fecha_fin"/>
                 <field name="id"/>
-                <field name="imagen_medium"/>
+                <field name="imagen_medium"/>+
+                
                  <!-- Plantilla QWeb para indicar como es la Tarjeta Kanban   -->
                 <templates>
                     <t t-name="kanban-box">

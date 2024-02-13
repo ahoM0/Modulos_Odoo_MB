@@ -12,9 +12,6 @@ class lista_tareas(models.Model):
     #se necesite un nombre, se usara el atributo tarea
     _rec_name="tarea"
 
-    #Elementos de cada fila del modelo de datos
-    #Los tipos de datos a usar en el ORM son 
-    # https://www.odoo.com/documentation/14.0/developer/reference/addons/orm.html#fields
    
     tarea = fields.Char("Título")
     prioridad = fields.Integer("Prioridad")
@@ -23,9 +20,6 @@ class lista_tareas(models.Model):
     fecha_fin = fields.Date("Fecha Fin")
     imagen_medium = fields.Image("Imagen")
     
-    #Indicamos que este valor es computado y se computara con la funcion "_value_urgente"
-    #Con store=True indicamos que pese a ser computado, cada vez que se compute se guarde en la base de datos
-    #esto se hace para que podamos utilizar el campo en busquedas, filtrados y ordenaciones
     urgente = fields.Boolean(compute="_value_urgente", store=True)
     realizada = fields.Boolean()
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
     <record id='biblioteca_comic_categoria_action' model='ir.actions.act_window'>
         <field name="name">Categorias Comics</field>
         <!-- Indicamos vistas para este modelo (categoria) -->

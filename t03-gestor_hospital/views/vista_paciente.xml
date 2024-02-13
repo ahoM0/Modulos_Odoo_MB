@@ -1,60 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="t03-gestor_hospital.list">
-      <field name="name">t03-GestorHospital list</field>
-      <field name="model">t03-gestor_hospital.t03-gestor_hospital</field>
+
+    <!-- Vista Formulario de Medicos-->
+ <record id="pacientes_view_form" model="ir.ui.view">
+        <field name="name">Pacientes del hospital</field>
+        <field name="model">hospital.pacientes</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="nombre" />
+                        <field name="apellidos" />
+                        <field name="sintomas" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Vista Listado de Pacientes en tree-->
+  <record model="ir.ui.view" id="gestorhospital_paciente_list">
+      <field name="name">Listado de Pacientes</field>
+      <field name="model">hospital.pacientes</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+          <field name="nombre"/>
+          <field name="apellidos"/>
+          <field name="sintomas"/>
         </tree>
       </field>
-    </record>
--->
+  </record>
+
 
     <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="t03-gestor_hospital.action_window">
-      <field name="name">t03-GestorHospital window</field>
-      <field name="res_model">t03-gestor_hospital.t03-gestor_hospital</field>
+    <record model="ir.actions.act_window" id="gestorhospital_paciente_action">
+      <field name="name">Ventana del listado de Pacientes</field>
+      <field name="res_model">hospital.pacientes</field>
       <field name="view_mode">tree,form</field>
     </record>
--->
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="t03-gestor_hospital.action_server">
-      <field name="name">t03-GestorHospital server</field>
-      <field name="model_id" ref="model_t03-gestor_hospital_t03-gestor_hospital"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
+    <!-- Top Menu -->
+    <menuitem name="Gestion Hospital" id="gestorhospital_menu"/>
 
-    <!-- Top menu item -->
-<!--
-    <menuitem name="t03-GestorHospital" id="t03-gestor_hospital.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="t03-gestor_hospital.menu_1" parent="t03-gestor_hospital.menu_root"/>
-    <menuitem name="Menu 2" id="t03-gestor_hospital.menu_2" parent="t03-gestor_hospital.menu_root"/>
--->
     <!-- actions -->
-<!--
-    <menuitem name="List" id="t03-gestor_hospital.menu_1_list" parent="t03-gestor_hospital.menu_1"
-              action="t03-gestor_hospital.action_window"/>
-    <menuitem name="Server to list" id="t03-gestor_hospital" parent="t03-gestor_hospital.menu_2"
-              action="t03-gestor_hospital.action_server"/>
--->
-  </data>
+    <menuitem name="Pacientes" id="gestorhospital_paciente_item" parent="gestorhospital_menu" action="gestorhospital_paciente_action"/>
+
+
 </odoo>

@@ -4,11 +4,20 @@ from odoo import models, fields
 
 
 class Diagnostico(models.Model):
-    _name = 'hospital.diagnostico'
+    _name = 'hospital.diagnosticos'
     _description = 'Listado de Diagnosticos realizados por los médicos'
+    _rec_name="num_diagnostico"
 
-    name_medico = fields.Char('Nombre del médico')
-    name_paciente = fields.Char('Nombre del paciente')
+    # 
+    num_diagnostico = fields.Integer('Número del diagnostico.')
 
+    # 
+    atencion_medicos = fields.Many2one('hospital.medicos')
+    pacientes_ids = fields.Many2one('hospital.pacientes')
+ 
+
+
+
+  
     
 

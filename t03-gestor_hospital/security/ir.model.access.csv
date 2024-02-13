@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_t03-gestor_hospital_t03-gestor_hospital,t03-gestor_hospital.t03-gestor_hospital,model_t03-gestor_hospital_t03-gestor_hospital,base.group_user,1,1,1,1
+acl_paciente,hospital.pacientes_default,model_hospital_pacientes,base.group_user,1,1,1,1
+acl_medico,hospital.medicos_default,model_hospital_medicos,base.group_user,1,1,1,1
+acl_diagnosticos,hospital.diagnosticos_default,model_hospital_diagnosticos,base.group_user,1,1,1,1
