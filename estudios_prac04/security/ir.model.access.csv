@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_estudios_alumno,estudios.alumno_default,model_estudios_alumno,base.group_user,1,1,1,1
+access_estudios_profesor,estudios.profesor_default,model_estudios_profesor,base.group_user,1,1,1,1
+access_estudios_modulo,estudios.modulo_default,model_estudios_modulo,base.group_user,1,1,1,1
+access_estudios_cicloformativo,estudios.cicloformativo_default,model_estudios_cicloformativo,base.group_user,1,1,1,1
+
+

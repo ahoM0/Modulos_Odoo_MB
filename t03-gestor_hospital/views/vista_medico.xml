@@ -23,6 +23,7 @@
 
      <!-- Top Menu -->
     <menuitem name="Gestion Hospital" id="gestorhospital_menu"/>
+    
     <!-- actions -->
   <menuitem name="Medicos" id="gestorhospital_medico_item" parent="gestorhospital_menu" action="gestorhospital_medico_action"/>
 

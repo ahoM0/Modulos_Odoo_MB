@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="estudios_list_tree_mod">
+        <field name="name" >Listado Modulos</field>
+        <field name="model" >estudios.modulo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="cicloFormativo"/>
+                <field name="alumnosMatriculados"/>
+                <field name="profesorImparte"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="estudios_action_window_mod">
+    <field name="name">Name Action Modulo</field>
+    <field name="res_model">estudios.modulo</field>
+     <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="List Modulos" id="estudios_modulos" parent="estudios_menu_2" action="estudios_action_window_mod"/>
+
+</odoo>
