@@ -18,6 +18,7 @@ Modulo que representa los ciclos formativos del Instituto
 
     # always loaded
     'data': [
+        'security/groups.xml',
         'security/ir.model.access.csv',
         'views/cicloformativo.xml',
         'views/alumno.xml',

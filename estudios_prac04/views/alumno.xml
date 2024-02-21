@@ -18,7 +18,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="estudios_action_window">
-      <field name="name">Name Action Alumno</field>
+      <field name="name">Name Action Alumnos.</field>
       <field name="res_model">estudios.alumno</field>
       <field name="view_mode">tree,form</field>
     </record>
